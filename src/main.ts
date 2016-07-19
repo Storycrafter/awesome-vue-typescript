@@ -1,6 +1,8 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
 
+import RouterConfig from './router-config'
+
 import './vendor' //bootstrap
 require('./main.scss'); //global css
 
@@ -15,22 +17,12 @@ require('./main.scss'); //global css
 */
 import './components/navbar/navbar'
 
-import { HomeComponent } from './views/home/home'
-import { AboutComponent } from './views/about/about'
 
 Vue.use(VueRouter);
 
 var app = Vue.extend({});
 
 var router = new VueRouter();
-
-router.map({
-  '/' : {
-      component: HomeComponent
-  },
-  '/about' : {
-      component: AboutComponent
-  }
-});
+router.map(RouterConfig.map);
 
 router.start(app, '#app-main');
