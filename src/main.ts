@@ -1,6 +1,8 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
 import * as VueResource from 'vue-resource'
+import * as Vuex from 'vuex'
+import Store from './vuex/store.ts'
 
 import RouterConfig from './router-config'
 
@@ -23,8 +25,11 @@ import './components/panel'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(Vuex);
 
-var app = Vue.extend({});
+var app = Vue.extend({
+  Store
+});
 
 var router = new VueRouter();
 router.map(RouterConfig.map);
