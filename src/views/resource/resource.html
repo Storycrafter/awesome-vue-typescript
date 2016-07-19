@@ -1,4 +1,4 @@
-<h1>Resource Example</h1>
+<Panel title="Resource Example">
 
 <p>
     <button class="btn btn-primary" @click.prevent="loadIssues">Load Vue.js Issues</button>
@@ -6,16 +6,12 @@
 
 <p>
     <table class="table table-bordered" v-if="showIssues">
-    <thead>
-      <tr v-for="i in issues">
-        <th><a href="{{i.html_url}}" target="_blank">{{i.title}}</a></th>
-      </tr>
-    </thead>
     <tbody>
-      <tr>
-
+      <tr v-for="i in issues">
+        <td><a href="{{i.html_url}}" target="_blank">{{i.title}}</a></td>
       </tr>
     </tbody>
   </table>
 </p>
 
+</Panel>
