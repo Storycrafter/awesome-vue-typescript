@@ -1,5 +1,6 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
+import * as VueResource from 'vue-resource'
 
 import RouterConfig from './router-config'
 
