@@ -1,9 +1,7 @@
 import { VueComponent } from 'vue-typescript'
-import Panel from '../../components/Panel'
 
 @VueComponent({
-    template: require('./vuex.html'),
-    components:[Panel]
+    template: require('./vuex.html')
 })
 export class VuexComponent extends Vue {
     

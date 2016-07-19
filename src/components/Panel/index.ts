@@ -1,4 +1,4 @@
-import { VueComponent, Prop, Watch } from 'vue-typescript'
+import { VueComponent, Prop } from 'vue-typescript'
 
 @VueComponent({
     template: require('./panel.html')

@@ -17,6 +17,9 @@ require('./main.scss'); //global css
 */
 import './components/navbar/navbar'
 
+import Panel from './components/panel'
+Vue.component('panel', Panel); 
+
 
 Vue.use(VueRouter);
 
