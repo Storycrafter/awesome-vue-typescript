@@ -24,6 +24,8 @@ export class Navbar extends Vue {
 
     links:Link[] = [
         new Link('Home', '/'),
+        new Link('Resource', '/resource'),
+        new Link('Vuex', '/vuex'),
         new Link('About', '/about')
     ]
 
