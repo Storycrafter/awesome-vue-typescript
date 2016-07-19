@@ -22,6 +22,7 @@ import './components/panel'
 
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 var app = Vue.extend({});
 

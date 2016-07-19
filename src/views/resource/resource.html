@@ -1,2 +1,21 @@
-<h1>Resourece Example</h1>
+<h1>Resource Example</h1>
+
+<p>
+    <button class="btn btn-primary" @click.prevent="loadIssues">Load Vue.js Issues</button>
+</p>
+
+<p>
+    <table class="table table-bordered" v-if="showIssues">
+    <thead>
+      <tr v-for="i in issues">
+        <th><a href="{{i.html_url}}" target="_blank">{{i.title}}</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+      </tr>
+    </tbody>
+  </table>
+</p>
 
