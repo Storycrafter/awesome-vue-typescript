@@ -1,4 +1,5 @@
 import { VueComponent } from 'vue-typescript'
+import { VueService } from '../../services/vue'
 
 @VueComponent({
     template: require('./resource.html')
@@ -13,15 +14,11 @@ export class ResourceComponent extends Vue {
 
     loadIssues(){
         console.log("loadIssues")
-        this.$http.get('https://api.github.com/repos/vuejs/vue/issues').then(response=>{
+        VueService.issues().then(response=>{
             console.log(response.data);
             this.$set('issues',response.data);
-        },
-        error=>{
+        },error=>{
             console.log(error);
         });
-
     }
-    
-
 }
